@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>BluePeak Digital | Páginas Web y Google Maps para Negocios en Puebla y Cholula</title>
-  <meta name="description" content="Creamos tu página web ultrarrápida y hacemos que tu negocio domine Google Maps en Puebla y Cholula. Especialistas en servicios y oficios locales.">
+  <title>BluePeak Digital | Páginas Web y Google Maps con IA para Negocios en Puebla y Cholula</title>
+  <meta name="description" content="Creamos tu página web ultrarrápida y hacemos que tu negocio domine Google Maps en Puebla y Cholula con IA. Especialistas en servicios y oficios locales.">
 
   <!-- Google Fonts: Manrope (Headings) & Hanken Grotesk (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +66,8 @@
             "md": "0.375rem",
             "lg": "0.5rem",
             "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
             "full": "9999px"
           },
           spacing: {
@@ -96,25 +98,13 @@
             "label-badge": ["Hanken Grotesk", "sans-serif"],
             "headline-md": ["Manrope", "sans-serif"]
           },
-          fontSize: {
-            "display-hero": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "800" }],
-            "display-hero-mobile": ["2.25rem", { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "800" }],
-            "headline-lg": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
-            "headline-lg-mobile": ["1.75rem", { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "700" }],
-            "headline-md": ["1.5rem", { lineHeight: "1.3", letterSpacing: "-0.015em", fontWeight: "700" }],
-            "headline-sm": ["1.125rem", { lineHeight: "1.4", letterSpacing: "-0.01em", fontWeight: "600" }],
-            "body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "0em", fontWeight: "400" }],
-            "body-md": ["1rem", { lineHeight: "1.55", letterSpacing: "0em", fontWeight: "400" }],
-            "body-sm": ["0.875rem", { lineHeight: "1.5", letterSpacing: "0.005em", fontWeight: "400" }],
-            "label-action": ["0.9375rem", { lineHeight: "1.2", letterSpacing: "0.01em", fontWeight: "600" }],
-            "label-badge": ["0.75rem", { lineHeight: "1", letterSpacing: "0.08em", fontWeight: "700" }]
-          },
           boxShadow: {
             "card": "0 4px 20px -2px rgba(11, 28, 61, 0.05), 0 2px 6px -1px rgba(11, 28, 61, 0.02)",
-            "card-hover": "0 16px 32px -4px rgba(11, 28, 61, 0.12), 0 4px 12px -2px rgba(11, 28, 61, 0.04)",
+            "card-hover": "0 20px 35px -5px rgba(11, 28, 61, 0.12), 0 6px 16px -2px rgba(11, 28, 61, 0.04)",
             "elevated": "0 12px 32px -4px rgba(11, 28, 61, 0.12)",
             "whatsapp": "0 8px 24px -2px rgba(34, 197, 94, 0.35)",
-            "blue": "0 8px 24px -2px rgba(47, 111, 235, 0.35)"
+            "blue": "0 8px 24px -2px rgba(47, 111, 235, 0.35)",
+            "spotlight": "0 0 40px -10px rgba(47, 111, 235, 0.25)"
           }
         }
       }
@@ -142,49 +132,36 @@
       }
     }
 
+    /* Fondo Blueprint Arquitectónico */
+    .blueprint-bg {
+      background-image: radial-gradient(rgba(11, 28, 61, 0.07) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
     /* Animaciones Custom */
     @keyframes floatGentle {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-8px);
-      }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
     }
 
     @keyframes pulseGlow {
-      0%, 100% {
-        opacity: 0.3;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 0.65;
-        transform: scale(1.08);
-      }
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
     }
 
     @keyframes radarWave {
-      0% {
-        transform: scale(1);
-        opacity: 0.8;
-      }
-      100% {
-        transform: scale(2.4);
-        opacity: 0;
-      }
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(2.4); opacity: 0; }
     }
 
-    .animate-float-slow {
-      animation: floatGentle 4s ease-in-out infinite;
+    @keyframes typingPulse {
+      0%, 100% { opacity: 0.2; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-2px); }
     }
 
-    .animate-pulse-glow {
-      animation: pulseGlow 6s ease-in-out infinite;
-    }
-
-    .animate-radar {
-      animation: radarWave 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-    }
+    .animate-float-slow { animation: floatGentle 4s ease-in-out infinite; }
+    .animate-pulse-glow { animation: pulseGlow 6s ease-in-out infinite; }
+    .animate-radar { animation: radarWave 2s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
 
     /* Scroll Reveal System */
     .reveal-item {
@@ -193,7 +170,6 @@
       transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
-
     .reveal-item.revealed {
       opacity: 1;
       transform: translateY(0);
@@ -210,11 +186,69 @@
       border: 1px solid rgba(11, 28, 61, 0.07);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
     }
-
     .interactive-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 16px 32px -4px rgba(11, 28, 61, 0.12), 0 4px 12px -2px rgba(11, 28, 61, 0.04);
+      box-shadow: 0 18px 36px -4px rgba(11, 28, 61, 0.12), 0 4px 12px -2px rgba(11, 28, 61, 0.04);
       border-color: rgba(47, 111, 235, 0.3);
+    }
+
+    /* Spotlight Glow Container */
+    .spotlight-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(11, 28, 61, 0.08);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      top: var(--mouse-y, -1000px);
+      left: var(--mouse-x, -1000px);
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(47, 111, 235, 0.12) 0%, rgba(47, 111, 235, 0) 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      opacity: 0;
+      z-index: 1;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Range Sliders Personalizados */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      background: transparent;
+    }
+    input[type=range]:focus {
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background: #ECEEF3;
+      border-radius: 9999px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background: #2F6FEB;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: -7px;
+      box-shadow: 0 2px 8px rgba(47, 111, 235, 0.5);
+      border: 3px solid #ffffff;
+      transition: transform 0.15s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
     }
 
     /* FAQ Acordeón Fluido con CSS Grid */
@@ -223,11 +257,9 @@
       grid-template-rows: 0fr;
       transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
-
     .faq-grid-wrapper.open {
       grid-template-rows: 1fr;
     }
-
     .faq-grid-inner {
       overflow: hidden;
     }
@@ -240,7 +272,6 @@
       border-bottom: 1px solid rgba(11, 28, 61, 0.06);
       transition: box-shadow 0.3s ease, background-color 0.3s ease;
     }
-
     .glass-nav.scrolled {
       box-shadow: 0 4px 20px -2px rgba(11, 28, 61, 0.08);
       background-color: rgba(248, 249, 255, 0.95);
@@ -269,11 +300,13 @@
       </div>
 
       <!-- Links Desktop -->
-      <nav class="hidden md:flex items-center gap-space-lg font-label-action text-label-action text-on-surface-variant font-medium">
+      <nav class="hidden md:flex items-center gap-5 lg:gap-7 font-label-action text-[14px] text-on-surface-variant font-medium">
         <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#inicio">Inicio</a>
-        <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#problema">Problema</a>
         <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#servicios">Servicios</a>
-        <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#como-funciona">Cómo Funciona</a>
+        <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#simulador-ia">Simulador IA</a>
+        <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#comparativa">Antes/Después</a>
+        <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#calculadora-roi">Calculadora ROI</a>
+        <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#zonas">Zonas</a>
         <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#precios">Precios</a>
         <a class="hover:text-secondary hover:translate-y-[-1px] transition-all" href="#faq">FAQ</a>
       </nav>
@@ -305,27 +338,35 @@
     
     <div class="flex-1 overflow-y-auto px-gutter-mobile py-space-md flex flex-col gap-space-xs">
       <span class="text-label-badge font-label-badge text-on-surface-variant uppercase tracking-wider px-space-xs mb-space-2xs">Navegación</span>
-      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-12 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#inicio">
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#inicio">
         <span class="material-symbols-outlined text-secondary text-[22px]">home</span>
         <span>Inicio</span>
       </a>
-      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-12 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#problema">
-        <span class="material-symbols-outlined text-secondary text-[22px]">report_problem</span>
-        <span>Problema</span>
-      </a>
-      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-12 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#servicios">
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#servicios">
         <span class="material-symbols-outlined text-secondary text-[22px]">precision_manufacturing</span>
-        <span>Servicios</span>
+        <span>Servicios Bento</span>
       </a>
-      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-12 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#como-funciona">
-        <span class="material-symbols-outlined text-secondary text-[22px]">route</span>
-        <span>Cómo Funciona</span>
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#simulador-ia">
+        <span class="material-symbols-outlined text-secondary text-[22px]">smart_toy</span>
+        <span>Simulador Flujo IA</span>
       </a>
-      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-12 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#precios">
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#comparativa">
+        <span class="material-symbols-outlined text-secondary text-[22px]">compare</span>
+        <span>Antes vs Después</span>
+      </a>
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#calculadora-roi">
+        <span class="material-symbols-outlined text-secondary text-[22px]">calculate</span>
+        <span>Calculadora ROI</span>
+      </a>
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#zonas">
+        <span class="material-symbols-outlined text-secondary text-[22px]">location_on</span>
+        <span>Zonas Puebla & Cholula</span>
+      </a>
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#precios">
         <span class="material-symbols-outlined text-secondary text-[22px]">sell</span>
         <span>Precios</span>
       </a>
-      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-12 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#faq">
+      <a class="drawer-link flex items-center gap-space-sm px-space-sm h-11 rounded-xl text-on-surface font-label-action hover:bg-surface-container transition-colors" href="#faq">
         <span class="material-symbols-outlined text-secondary text-[22px]">help_outline</span>
         <span>Preguntas Frecuentes</span>
       </a>
@@ -349,11 +390,11 @@
       <!-- ==========================================
            SECCIÓN 1: HERO
       ========================================== -->
-      <section class="relative px-gutter-mobile md:px-gutter-desktop pt-10 pb-16 md:pt-16 md:pb-24 flex flex-col gap-space-lg bg-surface max-w-[75rem] mx-auto w-full overflow-hidden" id="inicio">
+      <section class="relative px-gutter-mobile md:px-gutter-desktop pt-10 pb-16 md:pt-16 md:pb-24 flex flex-col gap-space-lg bg-surface max-w-[75rem] mx-auto w-full overflow-hidden blueprint-bg" id="inicio">
         
         <!-- Glows de fondo hero -->
-        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[550px] h-[350px] bg-secondary/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-glow"></div>
-        <div class="absolute -bottom-10 -right-10 w-[300px] h-[300px] bg-tertiary-fixed-dim/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-secondary/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-glow"></div>
+        <div class="absolute -bottom-10 -right-10 w-[320px] h-[320px] bg-tertiary-fixed-dim/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
         <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
           
@@ -385,9 +426,9 @@
                 <span class="material-symbols-outlined text-[24px]">chat</span>
                 <span>Quiero mi Diagnóstico Gratis</span>
               </a>
-              <a class="flex items-center justify-center gap-2 min-h-[50px] px-6 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-action text-base hover:translate-y-[-1px] transition-all font-semibold" href="#como-funciona">
-                <span>Ver Cómo Funciona</span>
-                <span class="material-symbols-outlined text-[18px] text-secondary">arrow_downward</span>
+              <a class="flex items-center justify-center gap-2 min-h-[50px] px-6 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-action text-base hover:translate-y-[-1px] transition-all font-semibold" href="#simulador-ia">
+                <span>Ver Flujo de IA en Vivo</span>
+                <span class="material-symbols-outlined text-[18px] text-secondary">smart_toy</span>
               </a>
             </div>
 
@@ -537,88 +578,249 @@
       </section>
 
       <!-- ==========================================
-           SECCIÓN 3: SERVICIOS
+           SECCIÓN 3: SERVICIOS (BENTO GRID MODERNO)
       ========================================== -->
-      <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface" id="servicios">
+      <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface blueprint-bg" id="servicios">
         <div class="max-w-[75rem] mx-auto flex flex-col gap-12">
           
           <div class="reveal-item flex flex-col gap-2 max-w-2xl">
             <div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-badge text-label-badge font-bold">
-              <span>NUESTROS SERVICIOS</span>
+              <span class="material-symbols-outlined text-[16px]">grid_view</span>
+              <span>ECOSISTEMA INTEGRAL BENTO</span>
             </div>
             <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl text-primary font-bold">
-              Todo lo que tu negocio necesita para no dejar ir clientes
+              Infraestructura Digital Diseñada para Ganar Clientes
             </h2>
             <p class="font-body text-on-surface-variant text-base">
-              Soluciones directas, veloces y enfocadas 100% en WhatsApp para que tú solo te encargues de hacer tu trabajo.
+              Combinamos velocidad técnica, automatización con IA y soporte humano continuo para negocios en Puebla y Cholula.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- BENTO GRID -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
-            <!-- Servicio 1 -->
-            <div class="reveal-item delay-100 bg-surface-container-lowest p-7 rounded-xl shadow-card interactive-card flex flex-col justify-between gap-6 relative overflow-hidden">
-              <div class="flex flex-col gap-4">
+            <!-- Bento Card 1 (Grande: 2 Columnas) -->
+            <div class="lg:col-span-2 reveal-item delay-100 bg-surface-container-lowest p-7 sm:p-9 rounded-2xl shadow-card spotlight-card flex flex-col justify-between gap-6 relative">
+              <div class="flex flex-col gap-4 z-10 relative">
                 <div class="flex items-center justify-between">
-                  <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center shadow-blue">
-                    <span class="material-symbols-outlined text-[26px]">bolt</span>
+                  <div class="w-14 h-14 rounded-2xl bg-secondary text-white flex items-center justify-center shadow-blue">
+                    <span class="material-symbols-outlined text-[30px]">bolt</span>
                   </div>
-                  <span class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-bold">100% Celular</span>
+                  <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-badge text-xs font-bold flex items-center gap-1">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      0.6s de Carga
+                    </span>
+                    <span class="font-label-badge text-xs px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-bold">100% Mobile</span>
+                  </div>
                 </div>
+
                 <div class="flex flex-col gap-2">
-                  <h3 class="font-headline text-xl text-primary font-bold">Landing Pages Ultrarrápidas</h3>
-                  <p class="font-body text-sm text-on-surface-variant leading-relaxed">
-                    Diseñadas exclusivamente para convertir visitantes en llamadas de chat. Carga instantánea en 4G y botón de un solo toque para cotizar por WhatsApp sin fricciones.
+                  <h3 class="font-headline text-2xl text-primary font-extrabold">Landing Pages Ultrarrápidas de Alta Conversión</h3>
+                  <p class="font-body text-base text-on-surface-variant leading-relaxed max-w-xl">
+                    Desarrolladas con arquitectura ligera sin plantillas pesadas. Optimizadas para redes celulares 4G en Puebla y diseñadas con un solo objetivo: que el cliente toque el botón de WhatsApp y te contrate sin rodeos.
                   </p>
                 </div>
+
+                <!-- Mini métricas integradas -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                  <div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/50 flex flex-col">
+                    <span class="font-headline text-xl font-bold text-secondary">+150%</span>
+                    <span class="text-xs text-on-surface-variant">Más mensajes</span>
+                  </div>
+                  <div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/50 flex flex-col">
+                    <span class="font-headline text-xl font-bold text-emerald-600">1-Tap</span>
+                    <span class="text-xs text-on-surface-variant">Llamada a WhatsApp</span>
+                  </div>
+                  <div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/50 col-span-2 sm:col-span-1 flex flex-col">
+                    <span class="font-headline text-xl font-bold text-primary">100%</span>
+                    <span class="text-xs text-on-surface-variant">Hosting & SSL Seguro</span>
+                  </div>
+                </div>
               </div>
-              <div class="flex items-center gap-2 pt-3 border-t border-outline-variant/60 text-secondary font-label-action text-sm font-bold">
-                <span class="material-symbols-outlined text-[20px]">trending_up</span>
-                <span>+150% más mensajes de cotización</span>
+
+              <div class="flex items-center justify-between pt-4 border-t border-outline-variant/60 z-10 relative">
+                <span class="text-sm font-semibold text-primary">Disponible en Puebla, Cholula y Angelópolis</span>
+                <span class="material-symbols-outlined text-secondary">arrow_forward</span>
               </div>
             </div>
 
-            <!-- Servicio 2 -->
-            <div class="reveal-item delay-200 bg-surface-container-lowest p-7 rounded-xl shadow-card interactive-card flex flex-col justify-between gap-6 relative overflow-hidden">
-              <div class="flex flex-col gap-4">
+            <!-- Bento Card 2 (Columna Derecha: IA Reseñas) -->
+            <div class="reveal-item delay-200 bg-surface-container-lowest p-7 rounded-2xl shadow-card spotlight-card flex flex-col justify-between gap-6 relative">
+              <div class="flex flex-col gap-4 z-10 relative">
                 <div class="flex items-center justify-between">
                   <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shadow-md">
                     <span class="material-symbols-outlined text-[26px]">smart_toy</span>
                   </div>
-                  <span class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 font-bold">Automatizado</span>
+                  <span class="font-label-badge text-xs px-2.5 py-1 rounded bg-amber-100 text-amber-900 font-bold">Autopilot IA</span>
                 </div>
                 <div class="flex flex-col gap-2">
                   <h3 class="font-headline text-xl text-primary font-bold">Dominio de Google Maps con IA</h3>
                   <p class="font-body text-sm text-on-surface-variant leading-relaxed">
-                    Sistema inteligente que solicita automáticamente reseñas de 5 estrellas por WhatsApp a tus clientes satisfechos después de cada servicio concluido.
+                    Robot de WhatsApp que contacta amablemente a tus clientes al concluir el servicio para que te califiquen con 5 estrellas con solo 1 clic.
                   </p>
                 </div>
+                <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/60 flex items-center gap-2.5">
+                  <span class="text-amber-500 font-bold text-lg">★★★★★</span>
+                  <span class="text-xs font-bold text-amber-900">+45 reseñas en 60 días</span>
+                </div>
               </div>
-              <div class="flex items-center gap-2 pt-3 border-t border-outline-variant/60 text-emerald-600 font-label-action text-sm font-bold">
+              <div class="flex items-center gap-2 pt-3 border-t border-outline-variant/60 text-emerald-600 font-label-action text-sm font-bold z-10 relative">
                 <span class="material-symbols-outlined text-[20px]">verified</span>
-                <span>#1 en búsquedas locales en tu zona</span>
+                <span>Posición #1 en tu zona</span>
               </div>
             </div>
 
-            <!-- Servicio 3 -->
-            <div class="reveal-item delay-300 bg-surface-container-lowest p-7 rounded-xl shadow-card interactive-card flex flex-col justify-between gap-6 relative overflow-hidden">
-              <div class="flex flex-col gap-4">
+            <!-- Bento Card 3 (Columna 1 Inferior: Soporte) -->
+            <div class="reveal-item delay-200 bg-surface-container-lowest p-7 rounded-2xl shadow-card spotlight-card flex flex-col justify-between gap-6 relative">
+              <div class="flex flex-col gap-4 z-10 relative">
                 <div class="flex items-center justify-between">
                   <div class="w-12 h-12 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center">
                     <span class="material-symbols-outlined text-[26px]">support_agent</span>
                   </div>
-                  <span class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-bold">Cero Estrés</span>
+                  <span class="font-label-badge text-xs px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-bold">Cero Dolores de Cabeza</span>
                 </div>
                 <div class="flex flex-col gap-2">
-                  <h3 class="font-headline text-xl text-primary font-bold">Mantenimiento y Soporte Continuo</h3>
+                  <h3 class="font-headline text-xl text-primary font-bold">Mantenimiento & Soporte Continuo</h3>
                   <p class="font-body text-sm text-on-surface-variant leading-relaxed">
-                    Hosting veloz, dominio activo, copias de seguridad, cambios de precios y soporte técnico directo por WhatsApp incluido en tu mensualidad sin dolores de cabeza.
+                    ¿Quieres cambiar tus precios o subir fotos de nuevos trabajos? Solo mándanos un mensaje por WhatsApp y lo actualizamos por ti.
                   </p>
                 </div>
               </div>
-              <div class="flex items-center gap-2 pt-3 border-t border-outline-variant/60 text-primary font-label-action text-sm font-bold">
+              <div class="flex items-center gap-2 pt-3 border-t border-outline-variant/60 text-primary font-label-action text-sm font-bold z-10 relative">
                 <span class="material-symbols-outlined text-[20px] text-secondary">check_circle</span>
-                <span>100% resuelto sin complicaciones</span>
+                <span>Soporte por WhatsApp</span>
+              </div>
+            </div>
+
+            <!-- Bento Card 4 (Columna 2 y 3 Inferior: Diagnóstico Territorial) -->
+            <div class="lg:col-span-2 reveal-item delay-300 bg-gradient-to-br from-primary to-slate-900 text-white p-7 sm:p-8 rounded-2xl shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-secondary/30 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="flex flex-col gap-2 max-w-lg z-10 relative">
+                <span class="text-xs font-bold tracking-wider uppercase text-secondary-fixed">DIAGNÓSTICO PERSONALIZADO</span>
+                <h3 class="font-headline text-xl sm:text-2xl font-bold text-white">¿Tu negocio aparece cuando buscan tu servicio en Cholula o Puebla?</h3>
+                <p class="font-body text-xs sm:text-sm text-slate-300">
+                  Hacemos una auditoría en vivo de tu zona y te mostramos qué competidores se están quedando con tus clientes.
+                </p>
+              </div>
+              <a href="https://wa.me/522222389443?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratis" class="z-10 relative shrink-0 px-5 py-3 rounded-xl bg-tertiary-fixed-dim text-white font-bold text-sm shadow-whatsapp hover:brightness-105 active:scale-95 transition-all flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>Pedir Auditoría Gratis</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 4: SIMULADOR EN VIVO DEL FLUJO DE IA
+      ========================================== -->
+      <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface-container-low border-y border-outline-variant/60" id="simulador-ia">
+        <div class="max-w-[75rem] mx-auto flex flex-col gap-12">
+          
+          <div class="reveal-item flex flex-col gap-2 max-w-2xl">
+            <span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider font-bold">AUTOMATIZACIÓN EN TIEMPO REAL</span>
+            <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl text-primary font-bold">
+              Mira cómo la IA consigue reseñas 5 estrellas por ti
+            </h2>
+            <p class="font-body text-on-surface-variant text-base">
+              Este es el flujo automático que se activa en WhatsApp cada vez que terminas un trabajo con un cliente satisfecho.
+            </p>
+          </div>
+
+          <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            
+            <!-- Simulador de Celular WhatsApp -->
+            <div class="w-full max-w-md bg-white rounded-3xl p-4 sm:p-6 shadow-2xl border-4 border-slate-800 flex flex-col gap-4">
+              
+              <!-- Header WhatsApp Simulado -->
+              <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                    BP
+                  </div>
+                  <div>
+                    <h4 class="font-headline text-sm font-bold text-primary flex items-center gap-1">
+                      Asistente IA BluePeak
+                      <span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+                    </h4>
+                    <p class="text-[11px] text-emerald-600 font-medium flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                      En línea • Respondiendo en automático
+                    </p>
+                  </div>
+                </div>
+                <button id="sim-restart-btn" class="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors text-xs font-semibold flex items-center gap-1" title="Reiniciar Simulación">
+                  <span class="material-symbols-outlined text-[16px]">replay</span>
+                  <span>Reiniciar</span>
+                </button>
+              </div>
+
+              <!-- Mensajes del Chat Animados -->
+              <div class="flex flex-col gap-3 min-h-[290px] justify-start py-2" id="sim-chat-container">
+                
+                <!-- Mensaje 1: Técnico -->
+                <div class="sim-msg opacity-0 transition-all duration-500 translate-y-2 self-end max-w-[85%] bg-emerald-500 text-white p-3 rounded-2xl rounded-tr-none text-xs shadow-sm" id="msg-1">
+                  <p class="font-medium">¡Servicio de instalación concluido con éxito en Cholula! Muchas gracias por la confianza Sr. Roberto. 🔧⚡</p>
+                  <span class="text-[9px] text-emerald-100 block text-right mt-1">11:30 AM • Enviado</span>
+                </div>
+
+                <!-- Mensaje 2: IA Automatizada -->
+                <div class="sim-msg opacity-0 transition-all duration-500 translate-y-2 self-start max-w-[88%] bg-slate-100 text-slate-800 p-3 rounded-2xl rounded-tl-none text-xs shadow-sm border border-slate-200" id="msg-2">
+                  <p class="font-semibold text-primary mb-1">🤖 Asistente BluePeak:</p>
+                  <p class="leading-relaxed">Hola Roberto, nos alegra haberte servido. ¿Nos apoyarías con <strong>10 segundos</strong> dejando tu opinión en Google Maps para seguir mejorando?</p>
+                  <div class="mt-2 p-2 bg-white rounded-lg border border-slate-200 flex items-center justify-between">
+                    <span class="text-[11px] font-bold text-secondary flex items-center gap-1">
+                      <span class="text-amber-400">★★★★★</span> Calificar en Google
+                    </span>
+                    <span class="material-symbols-outlined text-[16px] text-secondary">open_in_new</span>
+                  </div>
+                  <span class="text-[9px] text-slate-400 block text-right mt-1">11:31 AM • Automático</span>
+                </div>
+
+                <!-- Mensaje 3: Notificación de Reseña Recibida -->
+                <div class="sim-msg opacity-0 transition-all duration-500 translate-y-2 self-center w-full bg-amber-50 border border-amber-300 p-3 rounded-xl text-center shadow-md" id="msg-3">
+                  <div class="flex items-center justify-center gap-1 text-amber-500 font-bold text-sm">
+                    ★★★★★ <span class="text-xs text-amber-900 font-extrabold ml-1">¡NUEVA RESEÑA 5 ESTRELLAS!</span>
+                  </div>
+                  <p class="text-[11px] text-slate-700 mt-1 italic">"Puntuales, limpios y muy profesionales. 100% recomendados en Cholula."</p>
+                  <span class="text-[10px] text-emerald-700 font-bold block mt-1">📈 Posición en Google Maps: #1 en la zona</span>
+                </div>
+
+              </div>
+
+              <!-- Indicador de estado de la simulación -->
+              <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-center">
+                <span class="text-xs font-semibold text-slate-600" id="sim-status-text">▶️ Simulación en curso...</span>
+              </div>
+
+            </div>
+
+            <!-- Explicación de los 3 pasos de la IA -->
+            <div class="flex-1 flex flex-col gap-5">
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/60 shadow-sm">
+                <div class="w-10 h-10 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold shrink-0">1</div>
+                <div>
+                  <h4 class="font-headline font-bold text-primary text-base">Cero esfuerzo para ti</h4>
+                  <p class="font-body text-xs sm:text-sm text-on-surface-variant mt-0.5">Tú solo haces tu trabajo habitual. Al terminar, la automatización se encarga del seguimiento.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/60 shadow-sm">
+                <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold shrink-0">2</div>
+                <div>
+                  <h4 class="font-headline font-bold text-primary text-base">Enlace directo sin fricción</h4>
+                  <p class="font-body text-xs sm:text-sm text-on-surface-variant mt-0.5">El cliente no tiene que buscar tu negocio; la IA le abre la ventana exacta con las 5 estrellas preseleccionadas.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/60 shadow-sm">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold shrink-0">3</div>
+                <div>
+                  <h4 class="font-headline font-bold text-primary text-base">Efecto bola de nieve en Google Maps</h4>
+                  <p class="font-body text-xs sm:text-sm text-on-surface-variant mt-0.5">Google detecta tu actividad constante y te premia colocándote en los primeros 3 lugares cuando alguien busque una urgencia.</p>
+                </div>
               </div>
             </div>
 
@@ -627,7 +829,244 @@
       </section>
 
       <!-- ==========================================
-           SECCIÓN 4: CÓMO FUNCIONA (PASO A PASO)
+           SECCIÓN 5: COMPARADOR ANTES VS DESPUÉS
+      ========================================== -->
+      <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface" id="comparativa">
+        <div class="max-w-[75rem] mx-auto flex flex-col gap-10">
+          
+          <div class="reveal-item flex flex-col gap-2 text-center items-center">
+            <span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider font-bold">IMPACTO REAL EN TU NEGOCIO</span>
+            <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl text-primary font-bold">
+              ¿Cómo cambia tu negocio con BluePeak Digital?
+            </h2>
+            <p class="font-body text-on-surface-variant text-base max-w-xl">
+              Alterna entre ambos escenarios y descubre por qué la tecnología adecuada multiplica tus llamadas.
+            </p>
+
+            <!-- Toggle Switch Antes vs Después -->
+            <div class="inline-flex p-1.5 rounded-2xl bg-surface-container border border-outline-variant/80 mt-4 shadow-sm">
+              <button id="toggle-sin-btn" class="px-5 py-2.5 rounded-xl font-headline text-xs sm:text-sm font-bold transition-all text-on-surface-variant hover:text-primary">
+                ❌ Sin BluePeak (Tradicional)
+              </button>
+              <button id="toggle-con-btn" class="px-5 py-2.5 rounded-xl font-headline text-xs sm:text-sm font-bold transition-all bg-secondary text-white shadow-md">
+                ✅ Con BluePeak (Optimizado)
+              </button>
+            </div>
+          </div>
+
+          <!-- Cuadrícula Comparativa Reactiva -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5" id="comparative-cards">
+            
+            <!-- Métrica 1: Velocidad -->
+            <div class="comp-card bg-surface-container-lowest p-6 rounded-2xl shadow-card border border-outline-variant/60 flex flex-col gap-3 transition-all">
+              <div class="flex items-center justify-between">
+                <span class="font-label-badge text-xs uppercase font-bold text-on-surface-variant">Velocidad Móvil</span>
+                <span class="comp-icon material-symbols-outlined text-[24px] text-emerald-600">speed</span>
+              </div>
+              <div class="font-headline text-3xl font-extrabold comp-val text-emerald-600">0.6s</div>
+              <p class="font-body text-xs text-on-surface-variant comp-desc">
+                Carga instantánea en 4G. El cliente no se desespera ni se va con la competencia.
+              </p>
+            </div>
+
+            <!-- Métrica 2: Reseñas Google Maps -->
+            <div class="comp-card bg-surface-container-lowest p-6 rounded-2xl shadow-card border border-outline-variant/60 flex flex-col gap-3 transition-all">
+              <div class="flex items-center justify-between">
+                <span class="font-label-badge text-xs uppercase font-bold text-on-surface-variant">Reseñas en Maps</span>
+                <span class="comp-icon material-symbols-outlined text-[24px] text-amber-500">star</span>
+              </div>
+              <div class="font-headline text-3xl font-extrabold comp-val text-primary">85+ Reseñas 5★</div>
+              <p class="font-body text-xs text-on-surface-variant comp-desc">
+                Flujo constante cada semana en automático gracias a la IA por WhatsApp.
+              </p>
+            </div>
+
+            <!-- Métrica 3: Captación 24/7 -->
+            <div class="comp-card bg-surface-container-lowest p-6 rounded-2xl shadow-card border border-outline-variant/60 flex flex-col gap-3 transition-all">
+              <div class="flex items-center justify-between">
+                <span class="font-label-badge text-xs uppercase font-bold text-on-surface-variant">Urgencias Nocturnas</span>
+                <span class="comp-icon material-symbols-outlined text-[24px] text-secondary">chat</span>
+              </div>
+              <div class="font-headline text-3xl font-extrabold comp-val text-secondary">1-Tap WhatsApp</div>
+              <p class="font-body text-xs text-on-surface-variant comp-desc">
+                El cliente toca el botón flotante y te escribe directamente sin formularios aburridos.
+              </p>
+            </div>
+
+            <!-- Métrica 4: Posición en Puebla / Cholula -->
+            <div class="comp-card bg-surface-container-lowest p-6 rounded-2xl shadow-card border border-outline-variant/60 flex flex-col gap-3 transition-all">
+              <div class="flex items-center justify-between">
+                <span class="font-label-badge text-xs uppercase font-bold text-on-surface-variant">Posición Local</span>
+                <span class="comp-icon material-symbols-outlined text-[24px] text-emerald-600">military_tech</span>
+              </div>
+              <div class="font-headline text-3xl font-extrabold comp-val text-emerald-600">Top 3 Google</div>
+              <p class="font-body text-xs text-on-surface-variant comp-desc">
+                Apareces destacado en el mapa cuando buscan tu servicio cerca de su ubicación.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 6: CALCULADORA INTERACTIVA DE ROI
+      ========================================== -->
+      <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface-container-low border-y border-outline-variant/60" id="calculadora-roi">
+        <div class="max-w-4xl mx-auto flex flex-col gap-10">
+          
+          <div class="reveal-item flex flex-col gap-2 text-center items-center">
+            <span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider font-bold">CALCULADORA DE RETORNO DE INVERSIÓN</span>
+            <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl text-primary font-bold">
+              ¿Cuánto dinero extra puedes generar al mes?
+            </h2>
+            <p class="font-body text-on-surface-variant text-base max-w-xl">
+              Mueve los controles según los números de tu negocio y calcula tus ingresos potenciales con presencia digital optimizada.
+            </p>
+          </div>
+
+          <!-- Caja de Calculadora -->
+          <div class="reveal-item delay-100 bg-surface-container-lowest rounded-3xl p-6 sm:p-10 shadow-xl border border-outline-variant/60 flex flex-col lg:flex-row gap-8 items-center">
+            
+            <!-- Controles / Sliders -->
+            <div class="flex-1 w-full flex flex-col gap-6">
+              
+              <!-- Slider 1: Servicios al mes -->
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                  <label for="slider-services" class="font-headline text-sm font-bold text-primary">Servicios que realizas al mes:</label>
+                  <span class="font-headline text-base font-extrabold text-secondary px-3 py-1 rounded-lg bg-secondary-fixed" id="val-services">15 servicios</span>
+                </div>
+                <input type="range" id="slider-services" min="5" max="50" step="1" value="15">
+                <div class="flex justify-between text-[11px] text-on-surface-variant font-medium">
+                  <span>5 servicios</span>
+                  <span>50 servicios</span>
+                </div>
+              </div>
+
+              <!-- Slider 2: Ticket promedio -->
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                  <label for="slider-ticket" class="font-headline text-sm font-bold text-primary">Cobro promedio por servicio (MXN):</label>
+                  <span class="font-headline text-base font-extrabold text-emerald-700 px-3 py-1 rounded-lg bg-emerald-100" id="val-ticket">$1,200 MXN</span>
+                </div>
+                <input type="range" id="slider-ticket" min="300" max="4000" step="100" value="1200">
+                <div class="flex justify-between text-[11px] text-on-surface-variant font-medium">
+                  <span>$300 MXN</span>
+                  <span>$4,000 MXN</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-surface-container-low text-xs text-on-surface-variant flex items-center gap-2">
+                <span class="material-symbols-outlined text-[20px] text-secondary">info</span>
+                <span>Cálculo estimado basado en un aumento promedio del +35% en prospectos calificados por WhatsApp.</span>
+              </div>
+            </div>
+
+            <!-- Panel de Resultados -->
+            <div class="w-full lg:w-72 bg-gradient-to-br from-primary to-slate-900 text-white rounded-2xl p-6 flex flex-col gap-5 shadow-lg shrink-0 text-center">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300">Clientes Extra Estimados</span>
+                <div class="font-headline text-3xl font-extrabold text-secondary-fixed mt-1" id="res-extra-clients">+6 clientes/mes</div>
+              </div>
+
+              <div class="pt-3 border-t border-slate-700">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300">Ingreso Extra Potencial</span>
+                <div class="font-headline text-3xl sm:text-4xl font-extrabold text-emerald-400 mt-1" id="res-extra-money">+$7,200 MXN</div>
+                <span class="text-[10px] text-slate-400">mensuales adicionales</span>
+              </div>
+
+              <a id="calc-cta-btn" class="w-full py-3 rounded-xl bg-tertiary-fixed-dim text-white font-bold text-xs shadow-whatsapp hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-1.5" href="https://wa.me/522222389443?text=Hola%2C%20us%C3%A9%20la%20calculadora%20y%20quiero%20generar%20m%C3%A1s%20ingresos" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span>Quiero Estos Resultados</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 7: SELECTOR INTERACTIVO DE ZONAS
+      ========================================== -->
+      <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface" id="zonas">
+        <div class="max-w-[75rem] mx-auto flex flex-col gap-10">
+          
+          <div class="reveal-item flex flex-col gap-2 text-center items-center">
+            <span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider font-bold">COBERTURA TERRITORIAL</span>
+            <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl text-primary font-bold">
+              Demanda de Servicios en Puebla & Cholula
+            </h2>
+            <p class="font-body text-on-surface-variant text-base max-w-xl">
+              Selecciona tu zona de trabajo principal y mira el volumen estimado de clientes que buscan servicios de urgencia cada mes.
+            </p>
+
+            <!-- Pestañas de Zona -->
+            <div class="flex flex-wrap justify-center gap-2 mt-4" id="zone-tabs">
+              <button class="zone-tab-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-secondary text-white shadow-sm transition-all" data-zone="cholula-san-andres">
+                San Andrés Cholula
+              </button>
+              <button class="zone-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-zone="cholula-san-pedro">
+                San Pedro Cholula
+              </button>
+              <button class="zone-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-zone="angelopolis">
+                Zona Angelópolis / Lomas
+              </button>
+              <button class="zone-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-zone="puebla-centro">
+                Puebla Centro / Zavaleta
+              </button>
+              <button class="zone-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-surface-container text-on-surface-variant hover:text-primary transition-all" data-zone="cuautlancingo">
+                Cuautlancingo / Forjadores
+              </button>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Datos de la Zona Seleccionada -->
+          <div class="reveal-item delay-100 bg-surface-container-lowest rounded-3xl p-6 sm:p-8 shadow-card border border-outline-variant/60 max-w-3xl mx-auto w-full transition-all" id="zone-display-card">
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-5 border-b border-outline-variant/60">
+              <div>
+                <span class="text-xs font-bold text-secondary uppercase tracking-wider" id="zone-tag">Zona Universitaria & Residencial</span>
+                <h3 class="font-headline text-2xl font-extrabold text-primary" id="zone-name">San Andrés Cholula</h3>
+              </div>
+              <div class="px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 font-label-badge text-xs font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Alta Oportunidad Comercial</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-6">
+              <div class="p-4 rounded-xl bg-surface-container-low flex flex-col">
+                <span class="text-xs text-on-surface-variant">Búsquedas mensuales:</span>
+                <span class="font-headline text-2xl font-bold text-primary mt-1" id="zone-searches">+1,400 búsquedas</span>
+              </div>
+              <div class="p-4 rounded-xl bg-surface-container-low flex flex-col">
+                <span class="text-xs text-on-surface-variant">Oficios más buscados:</span>
+                <span class="font-headline text-sm font-bold text-secondary mt-1" id="zone-trades">Plomería, Cerrajería, Electricidad</span>
+              </div>
+              <div class="p-4 rounded-xl bg-surface-container-low flex flex-col">
+                <span class="text-xs text-on-surface-variant">Horario crítico:</span>
+                <span class="font-headline text-sm font-bold text-primary mt-1" id="zone-peak">Tardes y Noches (Urgencias)</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+              <p class="text-xs text-on-surface-variant leading-relaxed" id="zone-desc">
+                Excelente zona con alta densidad de fraccionamientos y departamentos que requieren atención inmediata y pagan tarifas de urgencia.
+              </p>
+              <a class="shrink-0 px-5 py-2.5 rounded-xl bg-primary text-white font-label-action text-xs font-bold hover:bg-slate-800 transition-colors flex items-center gap-1.5" href="https://wa.me/522222389443?text=Hola%2C%20quiero%20dominar%20las%20b%C3%BAsquedas%20en%20mi%20zona" target="_blank" rel="noopener noreferrer">
+                <span>Dominar esta zona</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIÓN 8: CÓMO FUNCIONA (PASO A PASO)
       ========================================== -->
       <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface-container-low border-y border-outline-variant/60" id="como-funciona">
         <div class="max-w-[75rem] mx-auto flex flex-col gap-12">
@@ -691,7 +1130,7 @@
       </section>
 
       <!-- ==========================================
-           SECCIÓN 5: PRECIOS TRANSPARENTES
+           SECCIÓN 9: PRECIOS TRANSPARENTES
       ========================================== -->
       <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface" id="precios">
         <div class="max-w-2xl mx-auto flex flex-col gap-10">
@@ -763,7 +1202,7 @@
       </section>
 
       <!-- ==========================================
-           SECCIÓN 6: PREGUNTAS FRECUENTES (FAQ)
+           SECCIÓN 10: PREGUNTAS FRECUENTES (FAQ)
       ========================================== -->
       <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface-container-low border-y border-outline-variant/60" id="faq">
         <div class="max-w-2xl mx-auto flex flex-col gap-10">
@@ -866,7 +1305,7 @@
       </section>
 
       <!-- ==========================================
-           SECCIÓN 7: CTA FINAL DE ALTA CONVERSIÓN
+           SECCIÓN 11: CTA FINAL DE ALTA CONVERSIÓN
       ========================================== -->
       <section class="px-gutter-mobile md:px-gutter-desktop py-20 bg-surface" id="contacto">
         <div class="max-w-3xl mx-auto">
@@ -909,7 +1348,7 @@
       </section>
 
       <!-- ==========================================
-           SECCIÓN 8: FOOTER
+           SECCIÓN 12: FOOTER
       ========================================== -->
       <footer class="px-gutter-mobile md:px-gutter-desktop pt-16 pb-28 md:pb-16 bg-surface-container-lowest border-t border-outline-variant/60">
         <div class="max-w-[75rem] mx-auto flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1006,9 +1445,9 @@
         <span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
         <span class="text-label-badge text-[10px]">Servicios</span>
       </a>
-      <a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="precios" href="#precios">
-        <span class="material-symbols-outlined text-[22px]">sell</span>
-        <span class="text-label-badge text-[10px]">Precios</span>
+      <a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="calculadora-roi" href="#calculadora-roi">
+        <span class="material-symbols-outlined text-[22px]">calculate</span>
+        <span class="text-label-badge text-[10px]">ROI</span>
       </a>
       <a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="contacto" href="#contacto">
         <span class="material-symbols-outlined text-[22px]">forum</span>
@@ -1045,7 +1484,254 @@
       revealElements.forEach(el => observer.observe(el));
     })();
 
-    // 2. FAQ Accordion Suave (Grid template rows)
+    // 2. Spotlight Cursor Effect on Cards
+    (function() {
+      const spotlightCards = document.querySelectorAll('.spotlight-card');
+      spotlightCards.forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+    })();
+
+    // 3. Simulador en Vivo del Flujo de IA por WhatsApp
+    (function() {
+      const msg1 = document.getElementById('msg-1');
+      const msg2 = document.getElementById('msg-2');
+      const msg3 = document.getElementById('msg-3');
+      const statusText = document.getElementById('sim-status-text');
+      const restartBtn = document.getElementById('sim-restart-btn');
+      let timeouts = [];
+
+      function clearSimulation() {
+        timeouts.forEach(t => clearTimeout(t));
+        timeouts = [];
+        [msg1, msg2, msg3].forEach(m => {
+          if (m) {
+            m.classList.add('opacity-0', 'translate-y-2');
+            m.classList.remove('opacity-100', 'translate-y-0');
+          }
+        });
+      }
+
+      function playSimulation() {
+        clearSimulation();
+        statusText.textContent = "▶️ Paso 1: Técnico concluye trabajo...";
+
+        // Paso 1: Técnico envía mensaje
+        timeouts.push(setTimeout(() => {
+          msg1.classList.remove('opacity-0', 'translate-y-2');
+          msg1.classList.add('opacity-100', 'translate-y-0');
+          statusText.textContent = "🤖 Paso 2: IA genera solicitud con enlace directo...";
+        }, 600));
+
+        // Paso 2: IA solicita reseña
+        timeouts.push(setTimeout(() => {
+          msg2.classList.remove('opacity-0', 'translate-y-2');
+          msg2.classList.add('opacity-100', 'translate-y-0');
+          statusText.textContent = "⭐ Paso 3: Cliente califica con 5 estrellas en Maps...";
+        }, 2200));
+
+        // Paso 3: Notificación de reseña recibida
+        timeouts.push(setTimeout(() => {
+          msg3.classList.remove('opacity-0', 'translate-y-2');
+          msg3.classList.add('opacity-100', 'translate-y-0');
+          statusText.textContent = "✅ ¡Listo! Nueva reseña añadida y posición #1 asegurada";
+        }, 4000));
+      }
+
+      if (restartBtn) {
+        restartBtn.addEventListener('click', playSimulation);
+      }
+
+      // Autoplay cuando la sección es visible
+      const simSection = document.getElementById('simulador-ia');
+      if (simSection && 'IntersectionObserver' in window) {
+        let hasPlayed = false;
+        const simObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !hasPlayed) {
+              hasPlayed = true;
+              playSimulation();
+            }
+          });
+        }, { threshold: 0.3 });
+        simObserver.observe(simSection);
+      }
+    })();
+
+    // 4. Comparador Interactivo "Antes vs Después"
+    (function() {
+      const toggleSin = document.getElementById('toggle-sin-btn');
+      const toggleCon = document.getElementById('toggle-con-btn');
+      const compContainer = document.getElementById('comparative-cards');
+
+      const dataSin = [
+        { title: "Velocidad Móvil", icon: "timer", val: "5.4 seg", color: "text-red-500", desc: "Página pesada que tarda en cargar. 8 de cada 10 clientes cierran la pestaña antes de ver tus servicios." },
+        { title: "Reseñas en Maps", icon: "star_half", val: "3 Viejas", color: "text-slate-700", desc: "Reseñas olvidadas de hace 2 años. Da desconfianza y Google baja tu visibilidad al fondo." },
+        { title: "Urgencias Nocturnas", icon: "phone_disabled", val: "Llamadas Perdidas", color: "text-red-500", desc: "Formularios de contacto que nadie lee a tiempo. Los clientes urgentes llaman a otro técnico." },
+        { title: "Posición Local", icon: "trending_down", val: "Posición #14", color: "text-slate-700", desc: "Invisible en el mapa de Puebla y Cholula. Solo te encuentran si buscan tu nombre exacto." }
+      ];
+
+      const dataCon = [
+        { title: "Velocidad Móvil", icon: "speed", val: "0.6s", color: "text-emerald-600", desc: "Carga instantánea en 4G. El cliente no se desespera ni se va con la competencia." },
+        { title: "Reseñas en Maps", icon: "star", val: "85+ Reseñas 5★", color: "text-primary", desc: "Flujo constante cada semana en automático gracias a la IA por WhatsApp." },
+        { title: "Urgencias Nocturnas", icon: "chat", val: "1-Tap WhatsApp", color: "text-secondary", desc: "El cliente toca el botón flotante y te escribe directamente sin formularios aburridos." },
+        { title: "Posición Local", icon: "military_tech", val: "Top 3 Google", color: "text-emerald-600", desc: "Apareces destacado en el mapa cuando buscan tu servicio cerca de su ubicación." }
+      ];
+
+      function renderComp(data, isCon) {
+        if (!compContainer) return;
+        compContainer.innerHTML = data.map(item => `
+          <div class="comp-card bg-surface-container-lowest p-6 rounded-2xl shadow-card border ${isCon ? 'border-secondary/20' : 'border-red-200'} flex flex-col gap-3 transition-all animate-fadeIn">
+            <div class="flex items-center justify-between">
+              <span class="font-label-badge text-xs uppercase font-bold text-on-surface-variant">${item.title}</span>
+              <span class="material-symbols-outlined text-[24px] ${item.color}">${item.icon}</span>
+            </div>
+            <div class="font-headline text-3xl font-extrabold ${item.color}">${item.val}</div>
+            <p class="font-body text-xs text-on-surface-variant leading-relaxed">${item.desc}</p>
+          </div>
+        `).join('');
+      }
+
+      if (toggleSin && toggleCon) {
+        toggleSin.addEventListener('click', () => {
+          toggleSin.classList.add('bg-red-500', 'text-white', 'shadow-md');
+          toggleSin.classList.remove('text-on-surface-variant');
+          toggleCon.classList.remove('bg-secondary', 'text-white', 'shadow-md');
+          toggleCon.classList.add('text-on-surface-variant');
+          renderComp(dataSin, false);
+        });
+
+        toggleCon.addEventListener('click', () => {
+          toggleCon.classList.add('bg-secondary', 'text-white', 'shadow-md');
+          toggleCon.classList.remove('text-on-surface-variant');
+          toggleSin.classList.remove('bg-red-500', 'text-white', 'shadow-md');
+          toggleSin.classList.add('text-on-surface-variant');
+          renderComp(dataCon, true);
+        });
+      }
+    })();
+
+    // 5. Calculadora Interactiva de ROI
+    (function() {
+      const sliderServices = document.getElementById('slider-services');
+      const sliderTicket = document.getElementById('slider-ticket');
+      const valServices = document.getElementById('val-services');
+      const valTicket = document.getElementById('val-ticket');
+      const resExtraClients = document.getElementById('res-extra-clients');
+      const resExtraMoney = document.getElementById('res-extra-money');
+      const calcCtaBtn = document.getElementById('calc-cta-btn');
+
+      function updateCalculator() {
+        if (!sliderServices || !sliderTicket) return;
+        const services = parseInt(sliderServices.value, 10);
+        const ticket = parseInt(sliderTicket.value, 10);
+
+        valServices.textContent = `${services} servicios`;
+        valTicket.textContent = `$${ticket.toLocaleString('es-MX')} MXN`;
+
+        // Estimación: +35% a +45% de incremento de clientes potenciales con web rápida y Maps
+        const extraClients = Math.max(3, Math.round(services * 0.40));
+        const extraIncome = extraClients * ticket;
+
+        resExtraClients.textContent = `+${extraClients} clientes/mes`;
+        resExtraMoney.textContent = `+$${extraIncome.toLocaleString('es-MX')} MXN`;
+
+        if (calcCtaBtn) {
+          const msg = encodeURIComponent(`Hola, calculé que con BluePeak Digital puedo generar +${extraClients} servicios extra ($${extraIncome.toLocaleString('es-MX')} MXN). Quiero mi diagnóstico gratis.`);
+          calcCtaBtn.href = `https://wa.me/522222389443?text=${msg}`;
+        }
+      }
+
+      if (sliderServices && sliderTicket) {
+        sliderServices.addEventListener('input', updateCalculator);
+        sliderTicket.addEventListener('input', updateCalculator);
+        updateCalculator();
+      }
+    })();
+
+    // 6. Selector Interactivo de Zonas
+    (function() {
+      const zoneData = {
+        'cholula-san-andres': {
+          tag: "Zona Universitaria & Residencial",
+          name: "San Andrés Cholula",
+          searches: "+1,400 búsquedas/mes",
+          trades: "Plomería, Cerrajería, Electricidad",
+          peak: "Tardes y Noches (Urgencias)",
+          desc: "Excelente zona con alta densidad de fraccionamientos y departamentos que requieren atención inmediata y pagan tarifas de urgencia."
+        },
+        'cholula-san-pedro': {
+          tag: "Zona Comercial & Tradicional",
+          name: "San Pedro Cholula",
+          searches: "+980 búsquedas/mes",
+          trades: "Mantenimiento, Herrería, Pintura, Gas",
+          peak: "Mañanas y Fines de semana",
+          desc: "Demanda sólida en negocios locales, restaurantes y residencias tradicionales que buscan profesionales de confianza comprobada en Google."
+        },
+        'angelopolis': {
+          tag: "Zona de Alto Poder Adquisitivo",
+          name: "Angelópolis / Lomas de Angelópolis",
+          searches: "+2,200 búsquedas/mes",
+          trades: "Climatización HVAC, Electricidad, Jardinería",
+          peak: "24/7 Urgencias y Mantenimiento",
+          desc: "La zona con el ticket promedio más alto del estado. Los clientes eligen al negocio con mejor reputación y responden al instante por WhatsApp."
+        },
+        'puebla-centro': {
+          tag: "Zona de Alta Densidad Urbana",
+          name: "Puebla Centro / Zavaleta",
+          searches: "+3,100 búsquedas/mes",
+          trades: "Cerrajería 24h, Plomería, Filtraciones",
+          peak: "Urgencias las 24 Horas",
+          desc: "Volumen masivo de búsquedas. Si apareces en el Top 3 de Google Maps, tu teléfono sonará de forma continua."
+        },
+        'cuautlancingo': {
+          tag: "Zona Industrial & Nuevos Fraccionamientos",
+          name: "Cuautlancingo / Forjadores",
+          searches: "+850 búsquedas/mes",
+          trades: "Impermeabilización, Luz, Boiler, Plomería",
+          peak: "Fines de semana y Tardes",
+          desc: "Zona en rápida expansión demográfica con miles de familias recién mudadas que aún no tienen técnicos de cabecera."
+        }
+      };
+
+      const tabBtns = document.querySelectorAll('.zone-tab-btn');
+      const zoneTag = document.getElementById('zone-tag');
+      const zoneName = document.getElementById('zone-name');
+      const zoneSearches = document.getElementById('zone-searches');
+      const zoneTrades = document.getElementById('zone-trades');
+      const zonePeak = document.getElementById('zone-peak');
+      const zoneDesc = document.getElementById('zone-desc');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => {
+            b.classList.remove('bg-secondary', 'text-white');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+          btn.classList.add('bg-secondary', 'text-white');
+          btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+          const zoneKey = btn.dataset.zone;
+          const data = zoneData[zoneKey];
+          if (data && zoneName) {
+            zoneTag.textContent = data.tag;
+            zoneName.textContent = data.name;
+            zoneSearches.textContent = data.searches;
+            zoneTrades.textContent = data.trades;
+            zonePeak.textContent = data.peak;
+            zoneDesc.textContent = data.desc;
+          }
+        });
+      });
+    })();
+
+    // 7. FAQ Accordion Suave (Grid template rows)
     (function() {
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
@@ -1056,7 +1742,6 @@
         btn.addEventListener('click', () => {
           const isOpen = wrapper.classList.contains('open');
 
-          // Cerrar los otros acordeones
           faqItems.forEach(otherItem => {
             if (otherItem !== item) {
               otherItem.querySelector('.faq-grid-wrapper').classList.remove('open');
@@ -1075,7 +1760,7 @@
       });
     })();
 
-    // 3. Header Dynamic Shadow on Scroll
+    // 8. Header Dynamic Shadow on Scroll
     (function() {
       const header = document.getElementById('main-header');
       window.addEventListener('scroll', () => {
@@ -1087,7 +1772,7 @@
       }, { passive: true });
     })();
 
-    // 4. Mobile Menu Drawer
+    // 9. Mobile Menu Drawer
     (function() {
       const openBtn = document.getElementById('menu-open-btn');
       const closeBtn = document.getElementById('menu-close-btn');
@@ -1117,7 +1802,7 @@
       }
     })();
 
-    // 5. Active Link Highlight in Bottom Nav
+    // 10. Active Link Highlight in Bottom Nav
     (function() {
       const navLinks = document.querySelectorAll('nav [data-path]');
       const sections = Array.from(navLinks).map(link => document.getElementById(link.dataset.path)).filter(Boolean);
